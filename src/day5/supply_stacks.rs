@@ -1,17 +1,14 @@
 use std::fs::File;
 use std::io::{BufReader, BufRead};
 use regex::Regex;
-use lazy_static::lazy_static;
-
-lazy_static! {
-    static ref RE: Regex = Regex::new(r"move (\d+) from (\d+) to (\d+)").unwrap();
-}
 
 pub fn solution() {
     let file = File::open("./src/day5/input.txt").unwrap();
     let reader = BufReader::new(file);
 
     let mut cargo: Vec<Vec<char>> = vec![];
+
+    let re: Regex = Regex::new(r"move (\d+) from (\d+) to (\d+)").unwrap();
 
     for line in reader.lines() {
         let instruction = line.unwrap();
@@ -36,7 +33,7 @@ pub fn solution() {
             continue;
         }
 
-        let capture = RE.captures(&instruction);
+        let capture = re.captures(&instruction);
 
         if capture.is_none() {
             continue;
