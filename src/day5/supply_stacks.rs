@@ -3,6 +3,10 @@ use std::io::{BufReader, BufRead};
 use regex::Regex;
 use lazy_static::lazy_static;
 
+lazy_static! {
+    static ref RE: Regex = Regex::new(r"move (\d+) from (\d+) to (\d+)").unwrap();
+}
+
 pub fn solution() {
     let file = File::open("./src/day5/input.txt").unwrap();
     let reader = BufReader::new(file);
@@ -30,10 +34,6 @@ pub fn solution() {
                 }
             }
             continue;
-        }
-
-        lazy_static! {
-            static ref RE: Regex = Regex::new(r"move (\d+) from (\d+) to (\d+)").unwrap();
         }
 
         let capture = RE.captures(&instruction);
