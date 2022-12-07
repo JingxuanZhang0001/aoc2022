@@ -18,7 +18,8 @@ pub fn solution() {
             if i < target {
                 continue;
             }
-            let set: HashSet<char> = HashSet::from_iter(input.as_str()[i - target..i].chars().clone());
+            // let set: HashSet<char> = HashSet::from_iter(input.as_str()[i - target..i].chars().clone());
+            let set: HashSet<char> = HashSet::from_iter((&input)[i - target..i].chars().clone());
             if set.len() == target {
                 println!("{}", i);
                 return;
