@@ -1,6 +1,6 @@
 use std::fs::File;
 use std::io::{BufReader, BufRead};
-use std::collections::HashMap;
+use std::collections::{HashMap, HashSet};
 
 pub fn build_fs() -> HashMap<String, i32> {
     let file = File::open("./src/day7/input.txt").unwrap();
@@ -11,6 +11,8 @@ pub fn build_fs() -> HashMap<String, i32> {
     fs.insert(root.clone(), 0);
 
     let mut current = vec![];
+
+    let mut visited: HashSet<String> = HashSet::new();
 
     for line in reader.lines() {
         let input = line.unwrap();
@@ -44,10 +46,17 @@ pub fn build_fs() -> HashMap<String, i32> {
                 let size = size_str.parse::<i32>().unwrap();
                 fs.insert(root.clone(), fs.get(&(root.clone())).unwrap_or(&0) + size);
                 let mut file = "".to_owned();
-                for f in current.iter() {
-                    file.push_str(&f);
-                    let dir = file.to_owned();
-                    fs.insert(dir.clone(), fs.get(&(dir.clone())).unwrap_or(&0) + size);
+                let mut final_file = "/".to_owned();
+                final_file.push_str(&current.join("/"));
+                final_file.push_str(tokens.next().unwrap());
+                if !visited.contains(&final_file) {
+                    visited.insert(final_file);
+                    for f in current.iter() {
+                        file.push_str("/");
+                        file.push_str(&f);
+                        let dir = file.to_owned();
+                        fs.insert(dir.clone(), fs.get(&(dir.clone())).unwrap_or(&0) + size);
+                    }
                 }
             },
         }
