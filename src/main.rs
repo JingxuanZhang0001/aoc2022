@@ -1,10 +1,10 @@
 // pub mod day1;
-pub mod day7;
+pub mod day8;
 
 fn main() {
     // day1::calorie_counting::solution();
     // day2::rock_paper_scissors::solution();
     // day3::rucksack_reorganization::solution();
     // day4::camp_cleanup::solution();
-    day7::no_space_left_on_device::solution();
+    day8::treetop_tree_house::solution();
 }
