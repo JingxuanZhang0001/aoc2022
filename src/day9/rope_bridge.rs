@@ -68,6 +68,10 @@ pub fn solution() {
 
     let mut visited: HashSet<Point> = HashSet::new();
     
+    // part 1
+    // let len = 2;
+
+    // part 2
     let len = 10;
 
     let mut points: Vec<Point> = vec![];
@@ -92,7 +96,7 @@ pub fn solution() {
             }
             for i in 1..len {
                 let (left, right) = points.split_at_mut(i);
-                follow(&left[i - 1], &mut right[0]);
+                follow(left.last().unwrap(), right.first_mut().unwrap());
             }
             visited.insert(points[len - 1].clone());
             // draw(&points);
