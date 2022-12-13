@@ -3,7 +3,7 @@ use std::fs::File;
 use std::io::{BufReader, BufRead};
 
 pub fn solution() {
-    let file = File::open("./src/day6/input.txt").unwrap();
+    let file = File::open("./src/inputs/day6.txt").unwrap();
     let reader = BufReader::new(file);
 
     for line in reader.lines() {

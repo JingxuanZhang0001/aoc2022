@@ -6,7 +6,7 @@ use std::cmp::Reverse;
 
 #[allow(dead_code)]
 fn part1() {
-    let contents = fs::read_to_string("./src/day1/input.txt").unwrap();
+    let contents = fs::read_to_string("./src/inputs/day1.txt").unwrap();
     let mut current: u128 = 0;
     let mut global_max: u128 = 0;
     for line in contents.lines() {
@@ -22,7 +22,7 @@ fn part1() {
 }
 
 fn part2() {
-    let contents = fs::read_to_string("./src/day1/input.txt").unwrap();
+    let contents = fs::read_to_string("./src/inputs/day1.txt").unwrap();
 
     let max_cap = 3;
     let mut heap = BinaryHeap::with_capacity(max_cap + 1);

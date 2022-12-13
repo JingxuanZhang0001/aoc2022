@@ -19,7 +19,7 @@ fn get_score_part1(input: &str) -> u128 {
 
 #[allow(dead_code)]
 fn part1() {
-    let file = File::open("./src/day2/input.txt").unwrap();
+    let file = File::open("./src/inputs/day2.txt").unwrap();
     let reader = BufReader::new(file);
 
     let mut res = 0;
@@ -50,7 +50,7 @@ fn get_score_part2(input: &str) -> u128 {
 }
 
 fn part2() {
-    let file = File::open("./src/day2/input.txt").unwrap();
+    let file = File::open("./src/inputs/day2.txt").unwrap();
     let reader = BufReader::new(file);
 
     let mut res = 0;

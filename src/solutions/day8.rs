@@ -4,7 +4,7 @@ use std::cmp;
 
 // O(n^2)
 pub fn part1() {
-    let file = File::open("./src/day8/input.txt").unwrap();
+    let file = File::open("./src/inputs/day8.txt").unwrap();
     let reader = BufReader::new(file);
 
     let mut map: Vec<Vec<u32>> = vec![];
@@ -60,7 +60,7 @@ pub fn part1() {
 
 // O(n^3)
 pub fn part2() {
-    let file = File::open("./src/day8/input.txt").unwrap();
+    let file = File::open("./src/inputs/day8.txt").unwrap();
     let reader = BufReader::new(file);
 
     let mut map: Vec<Vec<u32>> = vec![];

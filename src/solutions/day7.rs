@@ -3,7 +3,7 @@ use std::io::{BufReader, BufRead};
 use std::collections::{HashMap, HashSet};
 
 pub fn build_fs() -> HashMap<String, i32> {
-    let file = File::open("./src/day7/input.txt").unwrap();
+    let file = File::open("./src/inputs/day7.txt").unwrap();
     let reader = BufReader::new(file);
 
     let root = "".to_string();

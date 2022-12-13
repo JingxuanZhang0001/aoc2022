@@ -3,7 +3,7 @@ use std::io::{BufReader, BufRead};
 use regex::Regex;
 
 pub fn solution() {
-    let file = File::open("./src/day5/input.txt").unwrap();
+    let file = File::open("./src/inputs/day5.txt").unwrap();
     let reader = BufReader::new(file);
 
     let mut cargo: Vec<Vec<char>> = vec![];

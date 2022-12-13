@@ -63,7 +63,7 @@ fn draw(points: &Vec<Point>) {
 }
 
 pub fn solution() {
-    let file = File::open("./src/day9/input.txt").unwrap();
+    let file = File::open("./src/inputs/day9.txt").unwrap();
     let reader = BufReader::new(file);
 
     let mut visited: HashSet<Point> = HashSet::new();

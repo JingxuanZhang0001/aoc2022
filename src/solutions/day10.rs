@@ -5,7 +5,7 @@ use std::vec;
 
 #[allow(dead_code)]
 fn part1() {
-    let file = File::open("./src/day10/input.txt").unwrap();
+    let file = File::open("./src/inputs/day10.txt").unwrap();
     let reader = BufReader::new(file);
 
     let mut signal = 1;
@@ -42,7 +42,7 @@ fn part1() {
 }
 
 fn part2() {
-    let file = File::open("./src/day10/input.txt").unwrap();
+    let file = File::open("./src/inputs/day10.txt").unwrap();
     let reader = BufReader::new(file);
 
     let mut signal = 1;

@@ -31,7 +31,7 @@ fn get_badge_priority(r1: &str, r2: &str, r3: &str) -> u32 {
 }
 
 fn part2() {
-    let file = File::open("./src/day3/input.txt").unwrap();
+    let file = File::open("./src/inputs/day3.txt").unwrap();
     let reader = BufReader::new(file);
     let mut iter = reader.lines();
 
@@ -68,7 +68,7 @@ fn get_common_items_score(input: &str) -> u32 {
 
 #[allow(dead_code)]
 fn part1() {
-    let file = File::open("./src/day3/input.txt").unwrap();
+    let file = File::open("./src/inputs/day3.txt").unwrap();
     let reader = BufReader::new(file);
 
     let mut score = 0;
