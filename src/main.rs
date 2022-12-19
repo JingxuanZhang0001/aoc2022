@@ -6,5 +6,5 @@ fn main() {
     // day2::rock_paper_scissors::solution();
     // day3::rucksack_reorganization::solution();
     // day4::camp_cleanup::solution();
-    solutions::day16::solution();
+    solutions::day17::solution();
 }
